@@ -36,18 +36,18 @@ const VacanciesSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
-              href="tel:+0000"
+              href="tel:+380639426495"
               className="flex items-center gap-2 text-primary-foreground hover:text-gold transition-colors"
             >
               <Phone className="h-5 w-5" />
-              <span className="font-medium">+0000</span>
+              <span className="font-medium">+380 63 942 64 95</span>
             </a>
             <a
-              href="mailto:jobs@seacrew.com"
+              href="mailto:jobs@ncpgcrewing.com"
               className="flex items-center gap-2 text-primary-foreground hover:text-gold transition-colors"
             >
               <Mail className="h-5 w-5" />
-              <span className="font-medium">jobs@seacrew.com</span>
+              <span className="font-medium">jobs@ncpgcrewing.com</span>
             </a>
           </div>
         </div>

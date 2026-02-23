@@ -34,8 +34,6 @@ export const vessels: Record<VesselCategory, Vessel[]> = {
     { name: "FSL KELANG", imo: "9845049", dwt: 16850, type: "Container Ship", year: 2020, flag: "Liberia", image: "/ships/fsl-kelang.png" },
     { name: "FSL SINGAPORE", imo: "9845037", dwt: 16850, type: "Container Ship", year: 2020, flag: "Liberia", image: "/ships/fsl-singapore.png" },
     { name: "IRENES RESPECT", imo: "9964144", dwt: 30221, type: "Container Ship", year: 2024, flag: "Liberia", image: "/ships/irenes-respect.png" },
-    { name: "IRENES REWARD", imo: "9964168", dwt: 30221, type: "Container Ship", year: 2024, flag: "Marshall Islands", image: "/ships/irenes-reward.png" },
-    { name: "IRENES RULE", imo: "9953561", dwt: 29829, type: "Container Ship", year: 2023, flag: "Marshall Islands", image: "/ships/irenes-rule.png" },
   ],
   general_cargo: [
     { name: "BRIGHT OAK", imo: "9980667", dwt: 9953, type: "General Cargo Ship", year: 2023, flag: "Panama", image: "/ships/bright-oak.png" },
