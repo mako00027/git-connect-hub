@@ -9,12 +9,11 @@ import {
 } from "@/components/ui/table";
 
 const vacancies = [
-  { rank: "Master", vesselType: "Bulk Carrier", embarkation: "ASAP", dwt: "82,000" },
-  { rank: "Chief Officer", vesselType: "Container Ship", embarkation: "February 2026", dwt: "65,000" },
-  { rank: "2nd Engineer", vesselType: "Bulk Carrier", embarkation: "March 2026", dwt: "75,000" },
-  { rank: "3rd Officer", vesselType: "Container Ship", embarkation: "ASAP", dwt: "45,000" },
-  { rank: "AB Seaman", vesselType: "Bulk Carrier", embarkation: "January 2026", dwt: "58,000" },
-  { rank: "Electrician", vesselType: "Container Ship", embarkation: "ASAP", dwt: "52,000" },
+  { rank: "Chief Engineer", vesselType: "Bulk Carriers", embarkation: "ASAP", dwt: "34,778" },
+  { rank: "Master", vesselType: "Bulk Carriers", embarkation: "End of March 2026", dwt: "38,453" },
+  { rank: "Second Engineer", vesselType: "Bulk Carriers", embarkation: "April 2026", dwt: "35,832" },
+  { rank: "Chief Engineer", vesselType: "Container Ships", embarkation: "April 2026", dwt: "30,221" },
+  { rank: "Chief Officer", vesselType: "General Cargo", embarkation: "May 2026", dwt: "9,953" },
 ];
 
 const VacanciesSection = () => {
