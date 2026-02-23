@@ -17,17 +17,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    content: "123 Maritime Street, Odessa, Ukraine 65000",
+    content: "Polskyi descent, 9, Odesa, Odesa Oblast, Ukraine, 65000",
   },
   {
     icon: Phone,
     title: "Phone",
-    content: "+380 44 123 4567",
+    content: "+380 63 942 64 95",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "info@seacrew.com",
+    content: "info@ncpgcrewing.com",
   },
   {
     icon: Clock,

@@ -1,4 +1,5 @@
-import { Anchor, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import emblemImg from "@/assets/emblem.jpg";
 
 const Footer = () => {
   const quickLinks = [
@@ -19,15 +20,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-2 mb-4">
-              <Anchor className="h-8 w-8 text-gold" />
-              <span className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>SeaCrew</span>
+              <img src={emblemImg} alt="NCPG Crewing" className="h-10 w-10 rounded-full bg-white object-contain" />
+              <span className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>NCPG Crewing</span>
             </a>
             <p className="text-primary-foreground/80 max-w-md mb-6">
               Leading maritime recruitment agency connecting skilled seafarers with top shipping companies worldwide. Your trusted partner for a successful career at sea.
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:info@seacrew.com"
+                href="mailto:info@ncpgcrewing.com"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-gold rounded-full flex items-center justify-center transition-colors"
                 aria-label="Email"
               >
@@ -59,16 +60,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-3 text-primary-foreground/80">
-              <li>Hills Highway 1111</li>
-              <li>Marocco, 23-412</li>
+              <li>Polskyi descent, 9</li>
+              <li>Odesa, Odesa Oblast</li>
+              <li>Ukraine, 65000</li>
               <li>
-                <a href="tel:+0000" className="hover:text-gold transition-colors">
-                  +0000
+                <a href="tel:+380639426495" className="hover:text-gold transition-colors">
+                  +380 63 942 64 95
                 </a>
               </li>
               <li>
-                <a href="mailto:info@seacrew.com" className="hover:text-gold transition-colors">
-                  info@seacrew.com
+                <a href="mailto:info@ncpgcrewing.com" className="hover:text-gold transition-colors">
+                  info@ncpgcrewing.com
                 </a>
               </li>
             </ul>
@@ -76,7 +78,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-10 pt-6 text-center text-primary-foreground/60">
-          <p>&copy; 2025 SeaCrew Maritime Agency. All rights reserved.</p>
+          <p>&copy; 2025 NCPG Crewing. All rights reserved.</p>
         </div>
       </div>
     </footer>

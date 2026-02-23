@@ -1,23 +1,96 @@
 import { useState, useCallback } from "react";
-import { Ship, Users, FileText, Globe, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import {
+  Ship,
+  FileText,
+  Navigation,
+  CalendarClock,
+  GraduationCap,
+  Wallet,
+  Plane,
+  HeartPulse,
+  Stethoscope,
+  ShieldCheck,
+  UserX,
+  Scale,
+  Handshake,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+} from "lucide-react";
 import { vessels, vesselCategories, type VesselCategory } from "@/data/vessels";
 
 const services = [
   {
-    icon: Users,
-    title: "Crew Recruitment",
-    description: "We source and recruit qualified maritime professionals for all positions, from ratings to senior officers.",
-  },
-  {
     icon: FileText,
-    title: "Documentation Support",
-    description: "Complete assistance with visa processing, certificates, and all required maritime documentation.",
+    title: "Seafarer employment agreement",
+    description:
+      "Tailored contracts designed for maritime employment requirements, guaranteeing legal adherence and crew contentment for efficient operations.",
   },
   {
-    icon: Globe,
-    title: "Global Placement",
-    description: "Partnerships with leading shipping companies worldwide, offering opportunities across international waters.",
+    icon: Navigation,
+    title: "Marine deployment",
+    description:
+      "Skillfully coordinating crew placements across the globe, maximizing effectiveness and expertise on all vessel categories throughout the seas.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Scheduling",
+    description:
+      "Meticulous scheduling and rotation management for uninterrupted crew changeovers and operational flow, ensuring vessels remain fully manned at all times.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Training & development",
+    description:
+      "Cultivating maritime expertise through customized programs, boosting competencies, safety awareness, and professional advancement for seafarers in the maritime sector.",
+  },
+  {
+    icon: Wallet,
+    title: "Payroll & Pay slips",
+    description:
+      "Precise and punctual payroll management, complete with comprehensive pay slips, ensuring clear financial dealings for both vessel operators and crew.",
+  },
+  {
+    icon: Plane,
+    title: "Travel arrangement",
+    description:
+      "Optimized travel coordination for crew members, enabling smooth mobility to and from vessels, enhancing operational preparedness.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Insurance & health schemes",
+    description:
+      "Bespoke insurance and healthcare packages, protecting crew member welfare and delivering reassurance for vessel owners.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Medical claims arrangements",
+    description:
+      "Streamlined handling of medical claims, guaranteeing swift responsiveness and premium medical attention for seafarers.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Social security treatment",
+    description:
+      "Professional guidance on social security affairs, ensuring adherence to international standards and addressing the needs of crew members.",
+  },
+  {
+    icon: UserX,
+    title: "Termination procedure",
+    description:
+      "Orderly and compliant termination processes, safeguarding the rights of both vessel operators and crew members in the maritime industry.",
+  },
+  {
+    icon: Scale,
+    title: "Legal advice on social matters",
+    description:
+      "Knowledgeable legal counsel on social and employment matters, assisting clients in navigating intricate maritime regulations with assurance.",
+  },
+  {
+    icon: Handshake,
+    title: "Acting as agent or direct employer",
+    description:
+      "Flexible solutions, providing the option between agency representation and direct hire to suit varied workforce needs.",
   },
 ];
 
@@ -52,23 +125,23 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="section-title" style={{ fontFamily: "'Playfair Display', serif" }}>Our Services</h2>
+          <h2 className="section-title" style={{ fontFamily: "'Playfair Display', serif" }}>Global services</h2>
           <p className="section-subtitle">
-            We provide comprehensive maritime recruitment solutions, connecting skilled seafarers with leading shipping companies worldwide.
+            Our team is working hard to offer you the best recruitment process, giving you all the cards to turn the advantage of a recruitment process to your side.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
             <div
               key={index}
               className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-border"
             >
               <div className="w-14 h-14 bg-ocean/10 rounded-lg flex items-center justify-center mb-4">
-                <service.icon className="h-7 w-7 text-ocean" />
+                <service.icon className="h-7 w-7 text-ocean" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-semibold text-navy mb-3">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <h3 className="text-lg font-semibold text-navy mb-3">{service.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

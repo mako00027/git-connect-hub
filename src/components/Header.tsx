@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Anchor } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import emblemImg from "@/assets/emblem.jpg";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -45,8 +46,8 @@ const Header = () => {
             }}
             className="flex items-center gap-2 text-primary-foreground"
           >
-            <Anchor className="h-8 w-8 text-gold" />
-            <span className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>SeaCrew</span>
+            <img src={emblemImg} alt="NCPG Crewing" className="h-10 w-10 rounded-full bg-white object-contain" />
+            <span className="text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>NCPG Crewing</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
