@@ -64,43 +64,50 @@ const ContactSection = () => {
   //   }
   // To this:
   const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    // ... rest of code
-    
-    // Validation logic stays the same
+  
+    // 1. Validation
     const result = contactSchema.safeParse(formData);
-    if (!result.success) { /* ... keep your error mapping ... */ return; }
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach((err) => {
+        if (err.path[0]) fieldErrors[err.path[0] as string] = err.message;
+      });
+      setErrors(fieldErrors);
+      setIsSubmitting(false);
+      return;
+    }
   
-    setIsSubmitting(true);
-  
+    try {
+      // 2. Formspree API Call
       const response = await fetch("https://formspree.io/f/xykdlygp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-    
+  
       if (response.ok) {
-        toast({ title: "Message Sent!" });
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you shortly.",
+        });
         setFormData({ fullName: "", email: "", subject: "", message: "" });
       } else {
-        toast({ variant: "destructive", title: "Error sending message." });
+        throw new Error("Submission failed");
       }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error sending message.",
+        description: "Please try again later.",
+      });
+    } finally {
       setIsSubmitting(false);
-    };
-
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you shortly.",
-    });
-
-    setFormData({ fullName: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+    }
   };
 
+  
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
