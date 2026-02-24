@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:info@ncpgcrewing.com"
+                href="mailto:info@ncpgua.org"
                 className="w-10 h-10 bg-primary-foreground/10 hover:bg-gold rounded-full flex items-center justify-center transition-colors"
                 aria-label="Email"
               >
@@ -69,8 +69,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@ncpgcrewing.com" className="hover:text-gold transition-colors">
-                  info@ncpgcrewing.com
+                <a href="mailto:info@ncpgua.org" className="hover:text-gold transition-colors">
+                  info@ncpgua.org
                 </a>
               </li>
             </ul>
