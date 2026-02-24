@@ -15,11 +15,6 @@ const contactSchema = z.object({
 
 const contactInfo = [
   {
-    icon: MapPin,
-    title: "Address",
-    content: "Polskyi descent, 9, Odesa, Odesa Oblast, Ukraine, 65000",
-  },
-  {
     icon: Phone,
     title: "Phone",
     content: "+380 63 942 64 95",
@@ -28,11 +23,6 @@ const contactInfo = [
     icon: Mail,
     title: "Email",
     content: "info@ncpgcrewing.com",
-  },
-  {
-    icon: Clock,
-    title: "Working Hours",
-    content: "Mon - Fri: 9:00 AM - 6:00 PM",
   },
 ];
 
