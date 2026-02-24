@@ -62,8 +62,11 @@ const ContactSection = () => {
   //     setErrors(fieldErrors);
   //     return;
   //   }
+  // To this:
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // ... rest of code
     
     // Validation logic stays the same
     const result = contactSchema.safeParse(formData);
