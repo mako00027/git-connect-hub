@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@ncpgcrewing.com",
+    content: "info@ncpgua.org",
   },
 ];
 
