@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
 
-  base: '/git-connect-hub/',
+  base: '/',
   
   // plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   plugins: [react()],
