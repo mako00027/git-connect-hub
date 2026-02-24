@@ -31,13 +31,13 @@ export const vessels: Record<VesselCategory, Vessel[]> = {
     { name: "KEN ORCHID", imo: "9598153", dwt: 17019, type: "Bulk Carrier", year: 2011, flag: "Liberia", image: "ships/ken-orchid.png" },
   ],
   containers: [
-    { name: "FSL KELANG", imo: "9845049", dwt: 16850, type: "Container Ship", year: 2020, flag: "Liberia", image: "/ships/fsl-kelang.png" },
-    { name: "FSL SINGAPORE", imo: "9845037", dwt: 16850, type: "Container Ship", year: 2020, flag: "Liberia", image: "/ships/fsl-singapore.png" },
-    { name: "IRENES RESPECT", imo: "9964144", dwt: 30221, type: "Container Ship", year: 2024, flag: "Liberia", image: "/ships/irenes-respect.png" },
+    { name: "FSL KELANG", imo: "9845049", dwt: 16850, type: "Container Ship", year: 2020, flag: "Liberia", image: "ships/fsl-kelang.png" },
+    { name: "FSL SINGAPORE", imo: "9845037", dwt: 16850, type: "Container Ship", year: 2020, flag: "Liberia", image: "ships/fsl-singapore.png" },
+    { name: "IRENES RESPECT", imo: "9964144", dwt: 30221, type: "Container Ship", year: 2024, flag: "Liberia", image: "ships/irenes-respect.png" },
   ],
   general_cargo: [
-    { name: "BRIGHT OAK", imo: "9980667", dwt: 9953, type: "General Cargo Ship", year: 2023, flag: "Panama", image: "/ships/bright-oak.png" },
-    { name: "BRIGHT QUEEN", imo: "9995789", dwt: 9956, type: "General Cargo Ship", year: 2024, flag: "Panama", image: "/ships/bright-queen.png" },
-    { name: "FATIMA 2", imo: "9680281", dwt: 22538, type: "Deck Cargo Ship", year: 2015, flag: "Panama", image: "/ships/fatima-2.png" },
+    { name: "BRIGHT OAK", imo: "9980667", dwt: 9953, type: "General Cargo Ship", year: 2023, flag: "Panama", image: "ships/bright-oak.png" },
+    { name: "BRIGHT QUEEN", imo: "9995789", dwt: 9956, type: "General Cargo Ship", year: 2024, flag: "Panama", image: "ships/bright-queen.png" },
+    { name: "FATIMA 2", imo: "9680281", dwt: 22538, type: "Deck Cargo Ship", year: 2015, flag: "Panama", image: "ships/fatima-2.png" },
   ],
 };
