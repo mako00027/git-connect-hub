@@ -47,21 +47,44 @@ const ContactSection = () => {
     }
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setErrors({});
+
+  //   const result = contactSchema.safeParse(formData);
+  //   if (!result.success) {
+  //     const fieldErrors: Record<string, string> = {};
+  //     result.error.errors.forEach((err) => {
+  //       if (err.path[0]) {
+  //         fieldErrors[err.path[0] as string] = err.message;
+  //       }
+  //     });
+  //     setErrors(fieldErrors);
+  //     return;
+  //   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setErrors({});
-
+    
+    // Validation logic stays the same
     const result = contactSchema.safeParse(formData);
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
-      result.error.errors.forEach((err) => {
-        if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
-        }
+    if (!result.success) { /* ... keep your error mapping ... */ return; }
+  
+    setIsSubmitting(true);
+  
+      const response = await fetch("https://formspree.io/f/xykdlygp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      setErrors(fieldErrors);
-      return;
-    }
+    
+      if (response.ok) {
+        toast({ title: "Message Sent!" });
+        setFormData({ fullName: "", email: "", subject: "", message: "" });
+      } else {
+        toast({ variant: "destructive", title: "Error sending message." });
+      }
+      setIsSubmitting(false);
+    };
 
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
